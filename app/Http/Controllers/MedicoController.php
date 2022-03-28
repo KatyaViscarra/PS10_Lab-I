@@ -73,7 +73,7 @@ class MedicoController extends Controller
     {
         //Recuperar los datos
         $medico=Medico::findOrFail($id);
-        return view('medio.edit', compact('medico'));
+        return view('medico.edit', compact('medico'));
     }
 
     /**
@@ -90,7 +90,7 @@ class MedicoController extends Controller
         //
         $medicoData=request()->except(['_token', '_method']);
         Medico::where('id', '=', $id)->update($medicoData);
-        return redirent('medico');
+        return redirect('medico');
     }
 
     /**

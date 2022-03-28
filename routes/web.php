@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MedicaController;
+use App\Http\Controllers\MedicoController;
 use Illuminate\Support\Facades\Route;
 
 Route::resource('medico', MedicoController::class);
